@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.engIdiom, .rusIdiom{
+    text-align: center;
+    background-color: #e03366;
+    font-size: 30px;
+}
+.rusIdiom{
+    background-color: #2aa9e0;
+}
+.idiomsList{
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}

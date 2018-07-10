@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Cards</title>
+    <link rel="stylesheet" href="../styles/CardFlipper.css">
+    <link rel="stylesheet" href="../styles/randomizerCheckBox.css">
+    <link rel="stylesheet" href="../styles/mainStyles.css">
+
+
+
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <link rel="apple-touch-icon" href="../favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+<div class="randomizer">
+    <input id="randomCheck" type="checkbox" onclick="randomize()">
+    <label class="randomLabel" for="randomCheck" >Random</label>
+</div>
+
+
+
+
+
+<div class="wrapper">
+      <div class="cardWrapper">                                          <!--лучше это не трогать и оставить как есть-->
+        <div class="cardContainer">
+            <div class="card">
+                <div class="front">
+                    <h3 class="cardTitle" id="currentEngWord"></h3>
+                </div>
+                <div class="back">
+                    <h3 class="cardTitle" id="currentRusWord"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<input class="wordButton" onclick="nextWord()" type="button" value="Next word">
+<input class="wordButton" onclick="prevWord()" type="button" value="Previous word">
+
+<a href="../index.html">На главную</a>
+
+
+
+</body>
+
+<script src="../js/words/wordsMonthOne.js"></script>
+<script src="../js/NextWord.js"></script>
+<script src="../js/RotateCard.js"></script>
+
+
+
+
+</html>

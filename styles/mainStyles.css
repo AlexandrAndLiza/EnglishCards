@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Itim Cyrillic; /* Гарнитура шрифта */
+    src: url(../fonts/11988.otf); /* Путь к файлу со шрифтом */
+}
+
+a {
+    font-size: 30px;
+}
+
+* {
+    font-family: Itim Cyrillic;
+}
+
+.wrapper a {
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    width: 500px;
+    background-color: #e03366;
+}
