@@ -9,6 +9,9 @@ body{
     padding-right: 10px;
     margin-top: 10px;
 }
+#testTimer{
+    float: left;
+}
 
 #eng{
     height: 50px;

@@ -11,26 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div id="testArea">
+    <div id="testTimer">20</div>
+    <div id="counter">1</div>
+    <div id="eng"></div>
+  hgfhf
 
-<div id="counter">1</div>
-<div id="eng"></div>
 
+    <div id="flex">
+        <button onclick="change(1)" class="rus" id="button1"></button>
+        <button onclick="change(2)" class="rus" id="button2"></button>
+        <button onclick="change(3)" class="rus" id="button3"></button>
+        <button onclick="change(4)" class="rus" id="button4"></button>
+    </div>
 
-<div id="flex">
-<button onclick="change(1)" class="rus" id="button1"></button>
-<button onclick="change(2)" class="rus" id="button2"></button>
-<button onclick="change(3)" class="rus" id="button3"></button>
-<button onclick="change(4)" class="rus" id="button4"></button>
+    <div id="timer">До повторения осталось:
+        <span id="days"></span> days
+        <span id="hours"></span> hours
+        <span id="minutes"></span> minutes
+        <span id="seconds"></span> seconds
+    </div>
+
 </div>
-
-<div id="timer">До повторения осталось:
-    <span id="days"></span> days
-    <span id="hours"></span> hours
-    <span id="minutes"></span> minutes
-    <span id="seconds"></span> seconds
-</div>
-
-
 
 <div id="wrongWords">
 
@@ -41,8 +43,7 @@
 
 
 </div>
-
-
+<button onclick="startTest()">Restart</button>
 
 
 
@@ -54,7 +55,6 @@
 <script src="../js/words/wordsMonthOne.js"></script>
 <script src="../js/Test.js"></script>
 <script src="../js/timer.js"></script>
-
 
 
 </body>

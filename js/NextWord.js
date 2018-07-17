@@ -1,6 +1,7 @@
 var massIndex = 0;
 var a = "button" + 1;
-console.log(document.getElementById(a));
+var soundWord = words[0].engWord.trim().toLowerCase()
+
 
 
 pasteWordInHtmlByIndex(massIndex);
@@ -25,8 +26,10 @@ function prevWord() {
 }
 
 function pasteWordInHtmlByIndex(index) {
+
     document.getElementById('currentRusWord').innerHTML = words[index].rusWord;
     document.getElementById('currentEngWord').innerHTML = words[index].engWord;
+    soundWord = words[index].engWord.trim().toLowerCase();
 }
 
 function compareRandom(a, b) {
@@ -40,3 +43,13 @@ function randomize() {
     pasteWordInHtmlByIndex(0);
 
 }
+function playAudio(){
+   var audio_url='https://ssl.gstatic.com/dictionary/static/sounds/20160317/'+soundWord+'--_gb_1.mp3';
+    var playSound=new Audio(audio_url);
+    playSound.play();
+}
+$(".fa-volume-up").click(function () {
+    playAudio();
+});
+
+

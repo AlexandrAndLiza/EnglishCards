@@ -1,17 +1,33 @@
-var shuffle = words.sort(compareRandom);  //перемешиваем массив слов
-var counter = 0;
-var firstPosRight = Math.floor(Math.random() * 4) + 1;
-var wrongMass = [];
+
+var firstPosRight;
+var shuffle ;  //перемешиваем массив слов
+var wrongMass = [];  //массив неверных слов
+var counter ;
+var timer = 20;
+startTest();  //начало теста
+
+
+function startTest() {
+    //TODO очистить добавление на Html неверных слов
+    $('#wrongWords').hide();
+    $('#testArea').show();
+    firstPosRight = Math.floor(Math.random() * 4) + 1;
+    shuffle = words.sort(compareRandom);  //перемешиваем массив слов
+    wrongMass = [];  //массив неверных слов
+    counter = 0;
+
+
 
 //начальное заполенение
-$('#eng').html(shuffle[counter].engWord);
-$('#button' + firstPosRight).html(shuffle[counter].rusWord);
-for (var i = 0; i < 5; i++) {
-    if (i != firstPosRight) {
-        $('#button' + i).html(shuffle[i + 2].rusWord);
+    $('#eng').html(shuffle[counter].engWord);
+    $('#button' + firstPosRight).html(shuffle[counter].rusWord);
+    for (var i = 0; i < 5; i++) {
+        if (i != firstPosRight) {
+            $('#button' + i).html(shuffle[i + 2].rusWord);
+        }
     }
+    $('#counter').html("0/" + shuffle.length);
 }
-$('#counter').html("0/" + shuffle.length);
 
 function change(buttonNumber) {
 
@@ -42,8 +58,12 @@ function change(buttonNumber) {
     } else {
         if (wrongMass.length > 0) {
             for (var k = 0; k < wrongMass.length; k++) {
-                getWrongList(wrongMass[k].engWord, wrongMass[k].rusWord)
+                getWrongList(wrongMass[k].engWord, wrongMass[k].rusWord);
+
             }
+            $('#testArea').hide();
+            $('#wrongWords').show();
+
 
         }else{ alert(currentAnswer);}
 
@@ -91,3 +111,7 @@ function getWrongList(engWord, rusWord) {
         '</div>');
 
 }
+
+
+
+
